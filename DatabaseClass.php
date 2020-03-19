@@ -36,13 +36,13 @@ if(!class_exists('DatabaseClass')){
 					
 					DatabaseClass::$_link = $link;
 					if(DatabaseClass::$_link ){
-						echo "You're Connected! <br >";
+						print "You're Connected! <br >";
 						//exit;
 					}
 				}
 				catch( PDOException $e) {
 					//throw new PDOException( $e->getMessage(), (int) $e->getCode() );
-					echo 'Database Error MSG: ' . $e->getMessage() .'<br >Database Error Code: ' . $e->getCode() .'<br >';
+					print 'Database Error MSG: ' . $e->getMessage() .'<br >Database Error Code: ' . $e->getCode() .'<br >';
 				}
 					
 				
@@ -60,7 +60,7 @@ if(!class_exists('DatabaseClass')){
 			$stm = DatabaseClass::$_link->prepare($query);
 			
 			if(!is_array($params)){
-				echo "<p style='color:red; font-size:1.5em;'>Parameter must be an Array! Check parameter passed to the runQuery function.</p>";
+				print "<p style='color:red; font-size:1.5em;'>Parameter must be an Array! Check parameter passed to the runQuery function.</p>";
 				DatabaseClass::$_link = NULL;
 				//exit();
 			}
@@ -90,7 +90,7 @@ if(!class_exists('DatabaseClass')){
 			$stm = DatabaseClass::$_link->prepare($query);
 			
 			if(!is_array($params)){
-				echo "<p style='color:red; font-size:1.5em;'>Parameter must be an Array! Check parameter passed to the doRegister function.</p>";
+				print "<p style='color:red; font-size:1.5em;'>Parameter must be an Array! Check parameter passed to the doRegister function.</p>";
 				DatabaseClass::$_link = NULL;
 				//exit();
 			}
@@ -126,7 +126,7 @@ if(!class_exists('DatabaseClass')){
 			$stm = DatabaseClass::$_link->prepare($query);
 			
 			if(!is_array($params)){
-				echo "<p style='color:red; font-size:1.5em;'>Parameter must be an Array! Check parameter passed to the doRegister function.</p>";
+				print "<p style='color:red; font-size:1.5em;'>Parameter must be an Array! Check parameter passed to the doRegister function.</p>";
 				DatabaseClass::$_link = NULL;
 				//exit();
 			}
