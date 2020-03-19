@@ -60,7 +60,9 @@
 				   );
 				}
 				//print '<pre>' . print_r( $data, true )  . '</pre>';
-				print '<pre>' . var_dump( $data )  . '</pre>';
+				foreach( $data as $key => $val)(
+					print $data . <br />;
+					}
 				//exit();
 			}
 			
