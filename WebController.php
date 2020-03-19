@@ -59,7 +59,8 @@
 					'error_message' => 'Data cannot be empty'   
 				   );
 				}
-				print '<pre>' . print_r( $data, true )  . '</pre>';
+				//print '<pre>' . print_r( $data, true )  . '</pre>';
+				print '<pre>' . var_dump( $data )  . '</pre>';
 				//exit();
 			}
 			
