@@ -15,7 +15,7 @@
 				//echo "Hello contstruct";
 				//$this->run();
 				
-				echo 'Construct <br />';
+				//echo 'Construct <br />';
 				
 				
 				$logindata = array(
@@ -24,7 +24,7 @@
 					'userhash' => 'sjdkidsiwjijfwe'
 				);
 				
-				//$this->debug($logindata);
+				$this->debug($logindata);
 			}
 			
 			private function run(){
@@ -53,9 +53,14 @@
 			
 			/*Debug Data */
 			public function debug( $data = array() ){
-				
+				if(empty($data) || count($data)==0){
+				   $this->_error_message = array(
+				   	'error_code' => -1,
+					'error_message' => 'Data cannot be empty'   
+				   );
+				}
 				echo '<pre>' . print_r( $data, true )  . '</pre>';
-				exit();
+				//exit();
 			}
 			
 		} //end of class WebController
