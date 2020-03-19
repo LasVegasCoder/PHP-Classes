@@ -26,7 +26,7 @@ if(!class_exists('DatabaseClass')){
 		/* Connect to database function */
 		public static function _Connect( $dbengine = 'mysql', $host='127.0.0.1', $dbuser, $dbpass, $dbname = NULL  ){
 			
-			if(is_null( DatabaseClass::$_link )){
+			if(( DatabaseClass::$_link )===NULL){
 				/* Setup PDO Database Singleton Object */
 				try{
 					$link = new PDO ("$dbengine:host=$host;dbname=$dbname", $dbuser, $dbpass );
