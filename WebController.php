@@ -60,8 +60,8 @@
 				   );
 				}
 				//print '<pre>' . print_r( $data, true )  . '</pre>';
-				foreach( $data as $key => $val)(
-					print $data . <br />;
+				foreach( $data as $key => $val){
+					echo $data . '<br>';
 					}
 				//exit();
 			}
