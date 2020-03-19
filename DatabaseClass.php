@@ -36,8 +36,8 @@ if(!class_exists('DatabaseClass')){
 					
 					DatabaseClass::$_link = $link;
 					if(DatabaseClass::$_link ){
-						echo "Ashley you're freeking Connected! <br >";
-						exit;
+						echo "You're Connected! <br >";
+						//exit;
 					}
 				}
 				catch( PDOException $e) {
@@ -62,7 +62,7 @@ if(!class_exists('DatabaseClass')){
 			if(!is_array($params)){
 				echo "<p style='color:red; font-size:1.5em;'>Parameter must be an Array! Check parameter passed to the runQuery function.</p>";
 				DatabaseClass::$_link = NULL;
-				exit();
+				//exit();
 			}
 			
 			// echo "<pre>" . PRINT_R($params, 1) . "</pre>";
@@ -92,7 +92,7 @@ if(!class_exists('DatabaseClass')){
 			if(!is_array($params)){
 				echo "<p style='color:red; font-size:1.5em;'>Parameter must be an Array! Check parameter passed to the doRegister function.</p>";
 				DatabaseClass::$_link = NULL;
-				exit();
+				//exit();
 			}
 			
 			foreach( $params as $field => $value ){
@@ -128,7 +128,7 @@ if(!class_exists('DatabaseClass')){
 			if(!is_array($params)){
 				echo "<p style='color:red; font-size:1.5em;'>Parameter must be an Array! Check parameter passed to the doRegister function.</p>";
 				DatabaseClass::$_link = NULL;
-				exit();
+				//exit();
 			}
 			
 			foreach( $params as $field => $value ){
