@@ -29,7 +29,7 @@ if(!class_exists('DatabaseClass')){
 			if(( DatabaseClass::$_link )===NULL){
 				/* Setup PDO Database Singleton Object */
 				try{
-					$link = new PDO ("$dbengine:host=$host;dbname=$dbname", $dbuser, $dbpass );
+					$link = new PDO ("$dbengine:host=$host;dbname=" . $dbname, $dbuser, $dbpass );
 					$link->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 					$link->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 					$link->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
