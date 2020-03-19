@@ -102,7 +102,7 @@ if(!class_exists('DatabaseClass')){
 			$bool = $stm->execute();
 			if($bool){
 
-				if( $db->lastinsertid() > 0 ){
+				if( $stm->lastinsertid() > 0 ){
 					// To do : send an email with an activation link to activate new account.
 					// DatabaseClass::doActivation( $user_id );
 					
@@ -138,7 +138,7 @@ if(!class_exists('DatabaseClass')){
 			$bool = $stm->execute();
 			if($bool){
 
-				if( $db->lastinsertid() > 0 ){
+				if( $stm->lastinsertid() > 0 ){
 					$message =  "<p style='color:green'>Data Successfully inserted into database.</p>";
 				}else {
 					$message =  "<p style='color:red'>Data NOT inserted!.<br > Check your input data and try again.</p>";
